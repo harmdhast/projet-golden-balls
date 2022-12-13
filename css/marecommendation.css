@@ -6,7 +6,6 @@
     width: 80%;
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 5rem);
     background-color: lightgrey;
 }
 
@@ -56,3 +55,57 @@
     color:white;
 }
 
+.artist.hidden {
+    transition: 0.3s;
+    display: none;
+}
+
+.artist {
+    display: flex;
+    transition: 0.3s;
+    flex-direction: column;
+}
+
+.artist>.content{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.recommendations h1{
+    margin-left: 2rem;
+    border-bottom: solid 4px rgb(113, 87, 150);
+    width: max-content;
+    margin-bottom: 2rem;
+}
+
+.recommendations h2{
+    margin-left: 4rem;
+}
+
+.recommendations p{
+    margin: 0 2rem;
+    text-align: justify;
+}
+
+.recommendations {
+    margin-bottom: 2rem;
+}
+
+.soundcloud {
+    margin-bottom: 1rem;
+}
+
+.songs>.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.songs {
+    margin-bottom: 1rem;
+}
+
+.privacyPolicy {
+    opacity: 0 !important;
+}
