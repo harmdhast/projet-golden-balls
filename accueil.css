@@ -7,13 +7,13 @@ body{
     background-color: rgb(9, 1, 20);
 }
 header{
-    min-height: 100vh;
     width: 100%;
     background-color: rgb(9, 1, 20);
     background-position: center;
     background-size: cover;
-    position: relative;
+    position: sticky;
     top: 0;
+    z-index: 99999;
 }
 nav{
     display: flex;
@@ -54,13 +54,14 @@ nav img{
 .nav-links ul li a:hover::after{
     width: 100%;
 }
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .text-box{
     width: 90%;
     color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
 }
 .text-box h1{
