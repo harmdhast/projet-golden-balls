@@ -11,10 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;400;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="navbar.html" rel="import" />
     <script src="https://kit.fontawesome.com/b6b73c6dff.js" crossorigin="anonymous"></script> 
 </head>
 <body>
-    <header>
+    <!-- <header>
         <nav class="navbar">
             <a href="index.html"><img src="images/logo2white.png"></a>
             <div class="nav-links" id="navLinks">
@@ -29,7 +31,15 @@
             </div>
             <i class="fa-solid fa-bars" onclick="showMenu()"></i>
         </nav>
+    </header> -->
+    <header>
+        <script>$(function(){$('header').load("navbar.html");});</script> 
     </header>
+    
+    <?php include 'navbar.html'; ?>
+    <head>
+        <link rel="import" href="navbar.html">
+    </head>
     <main>
         <section class="intro">
             <div class="content">
