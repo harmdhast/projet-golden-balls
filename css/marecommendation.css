@@ -1,0 +1,58 @@
+@import url("accueil.css");
+
+.recommendations {
+    margin: auto;
+    margin-top: 1rem;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 5rem);
+    background-color: lightgrey;
+}
+
+.selector {
+    display: flex;
+    background-color: rgb(9, 1, 20);
+    padding: 5px;
+    justify-content: space-evenly;
+}
+
+.selector>.entry {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.selector img {
+    border-radius: 50%;
+    width: 110px;
+    opacity: 50%;
+}
+
+.selector>.entry:hover img {
+    opacity: 100%;
+    transition: 0.3s;
+}
+
+.selector>.entry:hover p {
+    opacity: 100%;
+    color: white;
+    transition: 0.3s;
+}
+
+.selector img:hover {
+    cursor: pointer;
+    transition: 0.3s;
+    /* opacity: 100%; */
+}
+
+.selector>.entry.selected>img{
+    opacity: 100%;
+}
+
+.selector>.entry.selected>p {
+    opacity: 100%;
+    color:white;
+}
+
