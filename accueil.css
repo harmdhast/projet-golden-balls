@@ -4,15 +4,15 @@
 }
 body{
     font-family: 'Kanit', sans-serif;
-    background-color: rgb(9, 1, 20);
+    background-color: lightgrey;
 }
 header{
     min-height: 100vh;
     width: 100%;
-    background-color: rgb(9, 1, 20);
+    background-color: rgb(113, 87, 150);
     background-position: center;
     background-size: cover;
-    position: relative;
+    position: sticky;
     top: 0;
 }
 nav{
@@ -54,19 +54,22 @@ nav img{
 .nav-links ul li a:hover::after{
     width: 100%;
 }
-.text-box{
+main{
+    background: lightgrey;
+}
+.univers{
     width: 90%;
     color: white;
-    position: absolute;
-    top: 50%;
+    position: relative;
+    top:0;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
 }
-.text-box h1{
+.univers h1{
     font-size: 62px;
 }
-.text-box p{
+.univers p{
     margin: 10px 0 40px;
     font-size: 14px;
     color: white;
@@ -112,7 +115,7 @@ nav .fa-solid{
     header{
         position: relative;
     }
-    .text-box h1{
+    .univers h1{
         font-size: 20px;
     }
     nav{
