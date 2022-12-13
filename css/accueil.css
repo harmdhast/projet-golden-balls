@@ -1,3 +1,5 @@
+@import url("header.css");
+
 *{
     margin: 0;
     padding: 0;
@@ -8,57 +10,9 @@ body{
     align-items: center;
     flex-direction: column;
     font-family: 'Kanit', sans-serif;
-    background-color: rgb(9, 1, 20);
+    background-color: rgb(18, 2, 40);
 }
-header{
-    width: 100%;
-    background-color: rgb(113, 87, 150);
-    background-position: center;
-    background-size: cover;
-    position: sticky;
-    top: 0;
-    z-index: 99999;
-}
-nav{
-    display: flex;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    background-color: rgb(9, 1, 20);
-    height: 4rem;
-}
-nav img{
-    width: 60px;
-}
-.nav-links{
-    text-align: center;
-}
-.nav-links ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 8px 29px;
-    position: relative;
-}
-.nav-links ul li a{
-    color: white;
-    font-weight:400;
-    text-decoration: none;
-    font-size: 20px;
-}
-.nav-links ul li a::after{
-    content:'';
-    width: 0%;
-    height: 2px;
-    background:#6D41A1;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-.nav-links ul li a:hover::after{
-    width: 100%;
-}
+
 main {
     width: 100%;
     display: flex;
