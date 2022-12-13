@@ -76,22 +76,6 @@ main {
     background:#6D41A1;
     transition: 1s;
 }
-.btn-hero2{
-    display: inline-block;
-    text-decoration: none;
-    color: black;
-    border: 1px solid black;
-    padding: 12px 34px;
-    font-size: 13px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-}
-.btn-hero2:hover{
-    border: 1px solid #6D41A1;
-    background:#6D41A1;
-    transition: 1s;
-}
 
 nav .fa-solid{
     display: none;
@@ -152,16 +136,22 @@ nav .fa-solid{
     margin: auto;
     text-align: center;
     padding-top: 100px;
-    background-color: lightgrey;
+    background-color:rgb(18, 2, 40);
 }
 h1{
     font-size: 36px;
     font-weight: 700;
+    color: white;
 }
 p{
-    color: grey;
+    color: lightgrey;
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
     padding: 10px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-evenly;
 }
