@@ -25,7 +25,7 @@
 .selector img {
     border-radius: 50%;
     width: 110px;
-    opacity: 70%;
+    opacity: 60%;
     transition: 0.3s;
 }
 
@@ -38,6 +38,7 @@
     opacity: 100%;
     color: lightgrey;
     transition: 0.3s;
+    text-align: center;
 }
 
 .selector>.entry:hover p {
@@ -88,14 +89,23 @@
 
 .recommendations h1{
     margin-left: 2rem;
-    border-bottom: solid 4px rgb(113, 87, 150);
+    margin-top: 1rem;
+    /* border-bottom: solid 4px rgb(113, 87, 150); */
+    border: solid 4px rgb(9, 1, 20);
+    border-radius: 0.5rem;
     width: max-content;
     margin-bottom: 2rem;
-    color: white;
+    color: rgb(9, 1, 20);
+    font-family: Righteous;
+    padding: 0 1rem;
 }
 
 .recommendations h2{
-    margin-left: 4rem;
+    border-bottom: solid 4px #6D41A1;
+    /* border-radius: 0.5rem; */
+    margin: 0 2.5rem;
+    font-family: Righteous;
+    color:#6D41A1;
 }
 
 .recommendations p{
@@ -106,6 +116,75 @@
 
 .recommendations {
     margin-bottom: 2rem;
+}
+
+.discography {
+    column-gap: 1rem;
+    margin: auto;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+
+@media screen and (min-width:800px) {
+    .discography {
+        width: 90%;
+    }
+}
+
+.discography>.album {
+    width: calc(100px + 8vw);
+    height: calc(100px + 8vw);
+    margin-bottom: 1rem;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.discography>.album:hover::after {
+    content: "";
+    transition: 0.3s;
+    background-color: rgba(0,0,0,1);
+    position: absolute;
+    width: calc(100px + 8vw);
+    height: calc(100px + 8vw);
+    opacity: 80%;
+    z-index: 1;
+}
+
+
+.discography>.album:hover div {
+    transition: 0.3s;
+    opacity: 100%;
+}
+
+.discography>.album>div {
+    transition: 0.3s;
+    opacity: 0;
+    text-align: center !important;
+    color:white;
+    z-index: 2;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+.discography>.album>.name {
+    margin: 0 0.4rem;
+    line-height: 1.3rem;
+    color:rgb(144, 124, 172);
+    font-weight: bold;
+    font-family: Righteous
+}
+
+.discography>.album>.type {
+    font-size: 1rem;
 }
 
 .soundcloud {
