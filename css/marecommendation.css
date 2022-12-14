@@ -6,7 +6,6 @@
     width: 80%;
     display: flex;
     flex-direction: column;
-    background-color: lightgrey;
 }
 
 .selector {
@@ -26,11 +25,18 @@
 .selector img {
     border-radius: 50%;
     width: 110px;
-    opacity: 50%;
+    opacity: 70%;
+    transition: 0.3s;
 }
 
 .selector>.entry:hover img {
     opacity: 100%;
+    transition: 0.3s;
+}
+
+.selector>.entry p {
+    opacity: 100%;
+    color: lightgrey;
     transition: 0.3s;
 }
 
@@ -48,6 +54,7 @@
 
 .selector>.entry.selected>img{
     opacity: 100%;
+    transition: 0.3s;
 }
 
 .selector>.entry.selected>p {
@@ -55,15 +62,22 @@
     color:white;
 }
 
-.artist.hidden {
+.artist {
     transition: 0.3s;
-    display: none;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    /* transform: scaleY(0); */
+    background-color: lightgrey;
 }
 
-.artist {
+.artist.selected {
     display: flex;
+    opacity: 100%;
     transition: 0.3s;
     flex-direction: column;
+    max-height: fit-content;
+    /* transform: scaleY(1); */
 }
 
 .artist>.content{
@@ -77,6 +91,7 @@
     border-bottom: solid 4px rgb(113, 87, 150);
     width: max-content;
     margin-bottom: 2rem;
+    color: white;
 }
 
 .recommendations h2{
@@ -84,6 +99,7 @@
 }
 
 .recommendations p{
+    color: #333;
     margin: 0 2rem;
     text-align: justify;
 }

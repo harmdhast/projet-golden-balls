@@ -3,7 +3,7 @@
     <div class="nav-links" id="navLinks">
         <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
         <ul>
-            <li><a href="index.html" class="selected">Accueil</a></li>
+            <li><a href="index.html">Accueil</a></li>
             <li><a href="monunivers.html">Mon Univers</a></li>
             <li><a href="monexposition.html">Mon Expo</a></li>
             <li><a href="mescollaborations.html">Mes Collaborations</a></li>
@@ -11,4 +11,5 @@
         </ul>
     </div>
     <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    <script>$(`li a[href*="${window.location.pathname.split("/").pop()}"]`).addClass("selected")</script>
 </nav>

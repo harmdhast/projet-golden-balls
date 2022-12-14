@@ -4,32 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nyato Beats | Accueil</title>
-    <link rel="stylesheet" href="css/marecommendation.css">
     <link rel="icon" href="images/logo.svg" type="image/png" title="My Website">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;400;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js">
     <script src="https://kit.fontawesome.com/b6b73c6dff.js" crossorigin="anonymous"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <title>Nyato Beats | Ma Recommendation</title>
+    <link rel="stylesheet" href="css/marecommendation.css">
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <a href="accueil.html"><img src="images/logo2white.png"></a>
-            <div class="nav-links">
-               <i class="fa-solid fa-xmark"></i>
-                <ul>
-                    <li><a href="accueil.html">Accueil</a></li>
-                    <li><a href="monunivers.html">Mon Univers</a></li>
-                    <li><a href="monexposition.html">Mon Expo</a></li>
-                    <li><a href="mescollaborations.html">Mes Collaborations</a></li>
-                    <li><a href="marecommendation.html" class="selected">Ma Recommendation</a></li>
-                </ul>
-            </div>
-            <i class="fa-solid fa-bars"></i>
-        </nav>
+        <script>$(function(){$('header').load("navbar.html");});</script> 
     </header>
+
     <main>
         <section class="recommendations">
             <div class="selector">
@@ -46,7 +33,7 @@
                     <p>Tsune</p>
                 </div>             
             </div>
-            <div class="artist" id="porter">
+            <div class="artist selected" id="porter">
                 <div class="content">
                     <h1>Porter Robinson</h1>
                     <h2>Biographie</h2>
