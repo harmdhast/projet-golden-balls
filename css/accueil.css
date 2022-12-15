@@ -136,6 +136,7 @@ nav .fa-solid{
     text-align: center;
     padding-top: 100px;
     background-color:rgb(18, 2, 40);
+    height: calc(100vh - 10rem);
 }
 .expo h1{
     font-size: 36px;
@@ -148,9 +149,12 @@ nav .fa-solid{
     font-weight: 400;
     line-height: 22px;
     padding: 10px;
+    margin: 10px 0 40px;
+    color: lightgrey;
+    text-align: center;
 }
 .row{
-    margin-top: 2%;
+    margin-top: 5%;
     display: flex;
     justify-content: space-between;
 }
@@ -162,12 +166,15 @@ nav .fa-solid{
     box-sizing: border-box;
     transition: 0.5s;
     width: 32%;
+    text-decoration: none;
 }
 .expo-colonne h3{
     text-align: center;
     font-weight: 400;
+
     color: white;
     margin: 10px 0;
+    margin-bottom: 2.5vh;
 }
 .expo-colonne:hover{
     box-shadow: 0 0 20px 0px rgba(163, 83, 255, 2);
@@ -177,4 +184,60 @@ nav .fa-solid{
     .row{
         flex-direction: column;
     }
+}
+
+/*--- collab ---*/
+.collab{
+    width: 100%;
+    margin-top: -25vh;
+    color: white;
+}
+.collab h1{
+    font-size: 36px;
+}
+.collab p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+}
+.collab a{
+    text-align: center;
+}
+.collab>.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: calc(100% - 20px);
+    margin: auto;
+}
+
+/*--- recommendation ---*/
+.recommendation{
+    width: 100%;
+    margin-top: 5vh;
+    color: white;
+}
+.recommendation h1{
+    font-size: 36px;
+}
+.recommendation p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+}
+.recommendation a{
+    text-align: center;
+}
+.recommendation>.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: calc(100% - 20px);
+    margin: auto;
 }
