@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/logo.svg" type="image/png" title="My Website">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;400;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous:wght@400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b6b73c6dff.js" crossorigin="anonymous"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <title>Nyato Beats | Ma Recommendation</title>
     <link rel="stylesheet" href="css/marecommendation.css">
 </head>
+
 <body>
     <header>
         <script>$(function(){$('header').load("navbar.html");});</script> 
@@ -20,38 +22,21 @@
     <main>
         <section class="recommendations">
             <div class="selector">
-                <div class ="entry">
-                    <img  src="recommendation/drippin.png">
-                    <p>Drippin</p>
+                <a class ="entry" id="drippin">
+                    <img  src="recommendation/drip/drippin.png">
+                    <p>Drippin' so pretty</p>
+                </a>
+                <div class ="entry" id="porter">
+                    <img src="recommendation/pr/porter.jpg">
+                    <p>Porter Robinson</p>
                 </div>
-                <div class ="entry selected">
-                    <img src="recommendation/porter.jpg">
-                    <p>Porter</p>
-                </div>
-                <div class ="entry">
-                    <img src="recommendation/tsune.jpg">
+                <div class ="entry" id="tsune">
+                    <img src="recommendation/tsune/tsune.jpg">
                     <p>Tsune</p>
                 </div>             
             </div>
-            <div class="artist selected" id="porter">
-                <div class="content">
-                    <h1>Porter Robinson</h1>
-                    <h2>Biographie</h2>
-                    <p>Porter Robinson, né le 15 juillet 1992 à Chapel Hill en Caroline du Nord, est un disc jockey et producteur américain. Il se popularise initialement avec la publication de son single Language, ainsi qu'au soutien de Skrillex et Zedd, notamment. Son premier album, Worlds est publié le 12 août 20141. Le 20 mars 2015, il est nommé « artiste de l'année » par MTV2. Le 23 avril 2021, son deuxième album Nurture sort. </p>
-                    <h2>Bibliographie</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quas voluptates obcaecati impedit deleniti? Dolor eius iure suscipit asperiores nam? Aut necessitatibus distinctio cumque error nostrum iusto iste animi non?</p>
-                    <h2>Mon avis</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quas voluptates obcaecati impedit deleniti? Dolor eius iure suscipit asperiores nam? Aut necessitatibus distinctio cumque error nostrum iusto iste animi non?</p>
-                </div>
-                <div class="songs">
-                    <h1>Mes sons préférés</h1>
-                    <div class="content">
-                        <iframe class="soundcloud" width="80%" height="120" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1305159481&color=%23141939&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-                        <iframe class="soundcloud" width="80%" height="120" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1305159481&color=%23141939&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-                        <iframe class="soundcloud" width="80%" height="120" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1305159481&color=%23141939&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-                    </div>
-                </div>
-            </div>
+            <content>
+            </content>
             
         </section>
     </main>
@@ -60,9 +45,34 @@
         <p>Je fais des instrumentales aux genres variés depuis maintenant plus de 3 ans<br>Ainsi que des musiques electroniques divers.</p>
         <a href="../monunivers/" class="btn-univers">EN SAVOIR PLUS</a>
     </div> -->
-    <script>
+    <!-- <script>
         let soundcloud = document.querySelectorAll(".soundcloud");
         console.log(soundcloud)
+    </script> -->
+    <script>
+        document.getElementById("drippin").addEventListener("click", loadEvent);
+        document.getElementById("porter").addEventListener("click", loadEvent);
+        document.getElementById("tsune").addEventListener("click", loadEvent);
+        document.getElementById("drippin").addEventListener("click", loadEvent);
+        document.getElementById("drippin").addEventListener("click", loadEvent);
+        function test() {
+            console.log("test")
+            $('aside').load(`./recommendation/drippin.html`);
+        }
+
+        function loadEvent (e) {
+            if (e.target.parentElement.classList.contains("selected")) return
+            loadPage(e.target.parentElement)
+        };
+
+        function loadPage(e) {
+            let name = e.id;
+            $(".entry.selected").removeClass("selected")
+            e.classList.add("selected")
+            $('content').load(`./recommendation/${name}.html`);
+        }
+
+        loadPage(document.getElementById("drippin"))
     </script>
 </body>
 </html>
