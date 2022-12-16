@@ -22,7 +22,7 @@
     <main>
         <section class="recommendations">
             <div class="selector">
-                <a class ="entry" id="drippin" style="order:3; background-image: url('recommendation/drip/drippin.png');">
+                <a class ="entry selected" id="drippin" style="order:3; background-image: url('recommendation/drip/drippin.png');">
                     <!-- <img  src="recommendation/drip/drippin.png"> -->
                     <p>Drippin' so pretty</p>
                 </a>
@@ -105,8 +105,8 @@
             let name = e.id;
             $('content').load(`./recommendation/${name}.html`);
         }
-        loadPage(document.getElementById("nasko"))
-        document.getElementById("crankdat").classList.add("crankdat")
+        loadPage(document.getElementById("drippin"))
+        
     </script>
 </body>
 </html>
