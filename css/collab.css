@@ -1,7 +1,12 @@
 body{
-    background-color: #716F6F;
-    color: white;
+    background-color: #2d1546;
+    color: white;background-image:url("../images/gif5.gif"); background-size:100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height:100%;
+    width:100%;
 }
+
 
 .claire{
     background-color: #D9D8D8;
@@ -13,7 +18,7 @@ body{
 .case{
     display: inline-block;
     width: 33%;
-    height: 200px;
+    height: 300px;
     margin: 1%;
 }
 
