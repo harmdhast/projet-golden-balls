@@ -16,63 +16,96 @@
 
 <body>
     <header>
-        <script>$(function(){$('header').load("navbar.html");});</script> 
+        <script>$(function(){
+            $('header').load("navbar.html");
+            let soundcloud = document.querySelectorAll(".soundcloud");
+            console.log(soundcloud)
+
+            console.log(soundcloud)
+            soundcloud[0].classList.add("privacyPolicy")
+        });</script> 
     </header>
 
     <main>
         <section class="recommendations">
             <div class="selector">
-                <a class ="entry" id="drippin">
-                    <img  src="recommendation/drip/drippin.png">
+                <a class ="entry selected" id="drippin" style="order:3; background-image: url('recommendation/drip/drippin.png');">
+                    <!-- <img  src="recommendation/drip/drippin.png"> -->
                     <p>Drippin' so pretty</p>
                 </a>
-                <div class ="entry" id="porter">
-                    <img src="recommendation/pr/porter.jpg">
+                <div class ="entry" id="porter" style="order:1; background-image: url('recommendation/pr/porter.jpg');">
+                    <!-- <img src="recommendation/pr/porter.jpg"> -->
                     <p>Porter Robinson</p>
                 </div>
-                <div class ="entry" id="tsune">
-                    <img src="recommendation/tsune/tsune.jpg">
+                <div class ="entry" id="tsune" style="order:2; background-image: url('recommendation/tsune/tsune.jpg');">
+                    <!-- <img src="recommendation/tsune/tsune.jpg"> -->
                     <p>Tsune</p>
-                </div>             
+                </div>
+                <div class ="entry" id="nasko" style="order:4; background-image: url('recommendation/nasko/nasko.jpg');">
+                    <!-- <img src="recommendation/nasko/nasko.jpg"> -->
+                    <p>Nasko</p>
+                </div> 
+                <div class ="entry" id="crankdat" style="order:5; background-image: url('recommendation/crankdat/crankdat.jpg');">
+                    <!-- <img src="recommendation/crankdat/crankdat.jpg"> -->
+                    <p>Crankdat</p>
+                </div> 
             </div>
             <content>
             </content>
             
         </section>
     </main>
-    <!-- <div class="text-box">
-        <h1>Beatmaker Français</h1>
-        <p>Je fais des instrumentales aux genres variés depuis maintenant plus de 3 ans<br>Ainsi que des musiques electroniques divers.</p>
-        <a href="../monunivers/" class="btn-univers">EN SAVOIR PLUS</a>
-    </div> -->
-    <!-- <script>
-        let soundcloud = document.querySelectorAll(".soundcloud");
-        console.log(soundcloud)
-    </script> -->
     <script>
         document.getElementById("drippin").addEventListener("click", loadEvent);
         document.getElementById("porter").addEventListener("click", loadEvent);
         document.getElementById("tsune").addEventListener("click", loadEvent);
-        document.getElementById("drippin").addEventListener("click", loadEvent);
-        document.getElementById("drippin").addEventListener("click", loadEvent);
+        document.getElementById("crankdat").addEventListener("click", loadEvent);
+        document.getElementById("nasko").addEventListener("click", loadEvent);
         function test() {
             console.log("test")
             $('aside').load(`./recommendation/drippin.html`);
         }
 
-        function loadEvent (e) {
-            if (e.target.parentElement.classList.contains("selected")) return
-            loadPage(e.target.parentElement)
+        let rem = parseFloat(getComputedStyle(document.documentElement).fontSize)
+
+        async function animateChange(e) {
+            let old = e.style.order;
+            let computed = getComputedStyle(e);
+            let dist = (3-old) * (e.clientWidth + parseFloat(computed.marginLeft) + parseFloat(computed.marginRight));
+            let entry = $(".entry.selected");
+
+            entry.removeClass("selected")
+            e.classList.add("selected")
+            console.log(dist)
+            $(e).css("transition", "0.3s")
+            $(e).css("transform", `translateX(${dist}px)`)
+            entry.css("transition", "0.3s")
+            entry.css("transform", `translateX(${-dist}px)`)
+            await new Promise(resolve => setTimeout(resolve, 300));
+            console.log("test")
+            $(e).css("order", "3")
+            $(e).css("transition", "0s")
+            $(e).css("transform", "")
+            entry.css("transition", "0s")
+            entry.css("transform", "")
+            e.style.order=3;
+            entry.css("order",old)
+            
+        }
+
+        function loadEvent(e) {
+            if (!(e.target.classList.contains("entry"))) return
+            if (e.target.classList.contains("selected")) return
+            animateChange(e.target)
+            loadPage(e.target)
         };
 
         function loadPage(e) {
             let name = e.id;
-            $(".entry.selected").removeClass("selected")
-            e.classList.add("selected")
             $('content').load(`./recommendation/${name}.html`);
         }
-
         loadPage(document.getElementById("drippin"))
+        
     </script>
 </body>
 </html>
