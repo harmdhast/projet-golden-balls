@@ -75,6 +75,52 @@ main {
     background:#6D41A1;
     transition: 1s;
 }
+.btn-hero2{
+    position: relative;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: black;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.btn-hero2::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 190%;
+    background: linear-gradient(#00ccff, #b100d4);
+    animation: animate 4s linear infinite;
+}
+.btn-hero2::after{
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: black;
+    border-radius: 16px;
+}
+@keyframes animate{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.btn-hero2 p{
+    position: relative;
+    color: white;
+    font-size: 13px;
+    z-index: 10;
+    margin: 0 5px;
+}
 
 nav .fa-solid{
     display: none;
@@ -177,7 +223,13 @@ nav .fa-solid{
     margin-bottom: 2.5vh;
 }
 .expo-colonne:hover{
-    box-shadow: 0 0 20px 0px rgba(163, 83, 255, 2);
+    box-shadow: 0 0 20px 0px rgba(163, 83, 255);
+    animation: pulse 1.3s infinite;
+}
+@keyframes pulse{
+    to {
+        box-shadow: 0 0 20px 18px rgba(163, 83, 255, 0.01);
+    }
 }
 
 @media(max-width: 700px){
@@ -195,7 +247,7 @@ nav .fa-solid{
 .collab h1{
     font-size: 36px;
 }
-.collab p{
+.collab>p{
     margin: 10px 0 40px;
     font-size: 14px;
     color: white;
@@ -217,16 +269,17 @@ nav .fa-solid{
 /*--- recommendation ---*/
 .recommendation{
     width: 100%;
-    margin-top: 5vh;
+    margin-top: 20vh;
     color: white;
+    margin-bottom: 40px;
 }
 .recommendation h1{
     font-size: 36px;
 }
-.recommendation p{
+.recommendation>p{
     margin: 10px 0 40px;
     font-size: 14px;
-    color: white;
+    color: lightgrey;
     text-align: center;
 }
 .recommendation a{
@@ -240,4 +293,37 @@ nav .fa-solid{
     width: 80%;
     height: calc(100% - 20px);
     margin: auto;
+}
+footer{
+    width: 100%;
+    background: rgb(9, 1, 20);
+    height: 4rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    background: rgb(9, 1, 20);    
+    width: 80%;
+    height: 4rem;
+}
+.footer>p{
+    color: white;
+    font-size: 13px;
+}
+.logo{
+    display: flex;
+    column-gap: 10px;
+}
+.logo>a{
+    width: 25px;
+    height: 25px;
+}
+.logo>a>img{
+    width: 100%;
 }
