@@ -144,12 +144,6 @@
     width: 80%;
 }
 
-@media screen and (min-width:800px) {
-    .discography {
-        width: 90%;
-    }
-}
-
 .discography>.album {
     width: calc(100px + 8vw);
     height: calc(100px + 8vw);
@@ -221,11 +215,57 @@
         width: 10vw;
         height: 10vw;
     }
+
+    .recommendations {
+        width: 90%;
+    }
+
+    .recommendations h1 {
+        font-size: min(7vw, 2rem);
+        margin: 0 0 1rem 2rem;
+    }
+
+    .discography {
+        width: 90%;
+    }
 }
 
 @media(max-width: 700px){
     .selector>.entry {
         width: 10vw;
         height: 10vw;
+        margin: 0;
+    }
+
+    .selector {
+        border-radius: 0;
+        padding: 0;
+        border: none;
+    }
+
+    .recommendations h1 {
+        font-size: min(7vw, 2rem);
+        margin: 0 auto 1rem auto;
+    }
+
+    .recommendations h2 {
+        margin: 0rem 1.5rem;
+    }
+
+    .recommendations p {
+        margin: 0 1rem;
+    }
+
+    .recommendations {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .discography {
+        width: 90%;
+    }
+
+    .soundcloud {
+        width: 90%;
     }
 }
