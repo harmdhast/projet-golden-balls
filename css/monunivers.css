@@ -1,4 +1,5 @@
 @import url(accueil.css);
+
 body{
     /* display: flex; */
     justify-content: center;
@@ -24,6 +25,7 @@ main {
     position:relative;
     margin: auto;
     object-fit:cover;
+    
 
 }
 
@@ -35,20 +37,8 @@ main {
     position:relative;
     margin: auto;
     object-fit:cover;
-
-    /*  margin: auto;
-    position:relative;
-    height: calc(100% + 20px);;
-    width: 100%;
-    left: 0;
-    right: 0;
-    top: -100%;
-    bottom: 0;
-    z-index: -1;
-    object-fit:cover;
-    opacity: 30%;
-     */
 }
+
 .expo{
     width: 80%;
     margin: auto;
@@ -56,11 +46,13 @@ main {
     padding-top: 100px;
     background-color:rgb(18, 2, 40);
 }
+
 h1{
     font-size: 36px;
     font-weight: 700;
     color: white;
 }
+
 p{
     color: lightgrey;
     font-size: 14px;
@@ -68,7 +60,6 @@ p{
     line-height: 22px;
     padding: 10px;
 }
-
 
 h2{
     font-size: 36px;
@@ -81,8 +72,7 @@ h2{
     display: flex;
     justify-content: space-evenly;
 }
-
-    
+ 
 .ui{
 
     background-image: url('../images/giphy.gif');
@@ -94,10 +84,14 @@ h2{
     object-fit:cover;
     color: white;
     font-size: 40px;
+    border: solid 4px rgb(9, 1, 20);
+    border-radius: 1rem 1rem 0 0;
+    height: calc(120px + 2rem);
 }    
 
 .uii{
     font-size: 20px;
     color: yellow;
     font-family:"Orbitron";
+
 }
