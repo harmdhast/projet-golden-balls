@@ -2,14 +2,25 @@
     <a href="index.html"><img src="images/logo2white.png"></a>
     <div class="nav-links" id="navLinks">
         <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="monunivers.html">Mon Univers</a></li>
-            <li><a href="monexposition.html">Mon Expo</a></li>
-            <li><a href="mescollaborations.html">Mes Collaborations</a></li>
-            <li><a href="marecommendation.html">Ma Recommendation</a></li>
-        </ul>
+        <a href="index.html"><div>Accueil</div></a>
+        <a href="monunivers.html"><div>Mon Univers</div></a>
+        <a href="monexposition.html"><div>Mon Expo</div></a>
+        <a href="mescollaborations.html"><div>Mes Collaborations</div></a>
+        <a href="marecommendation.html"><div>Ma Recommendation</div></a>
     </div>
-    <i class="fa-solid fa-bars" onclick="showMenu()"></i>
-    <script>$(`li a[href*="${window.location.pathname.split("/").pop()}"]`).addClass("selected")</script>
+    <a  onclick="showMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </a>
+    <script>$(`a[href*="${window.location.pathname.split("/").pop()}"]`).addClass("selected")</script>
+    <script>
+        function showMenu(e) {
+            $("#navLinks").animate({"right": "0"})
+            console.log(e)
+        }
+
+        function hideMenu(e) {
+            $("#navLinks").animate({"right": "-100vw"})
+            console.log(e)
+        }
+    </script>
 </nav>
