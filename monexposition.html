@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nyato Beats | Accueil</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/monexposition.css">
     <link rel="icon" href="logo.svg" type="image/png" title="My Website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,18 +14,67 @@
     <script src="https://kit.fontawesome.com/b6b73c6dff.js" crossorigin="anonymous"></script> 
 </head>
 <body>
-<section class="header">
-    <nav class="navbar">
-        <a href="accueil.html"><img src="logo2white.png"></a>
-        <div class="nav-links" id="navLinks">
-           <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
-            <ul>
-                <li><a href="accueil.html">ACCUEIL</a></li>
-                <li><a href="monunivers.html">Mon Univers</a></li>
-                <li><a href="monexposition.html">Mon Expo</a></li>
-                <li><a href="mescollaborations.html">Mes Collaborations</a></li>
-                <li><a href="marecommandation.html">Ma Recommandation</a></li>
-            </ul>
-        </div>
-        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
-    </nav>
+    <header>
+        <section class="header">
+            <nav class="navbar">
+                <a href="index.html"><img src="./images/logo2white.png"></a>
+                <div class="nav-links" id="navLinks">
+                   <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="monunivers.html">Mon Univers</a></li>
+                        <li><a href="monexposition.html">MON EXPO</a></li>
+                        <li><a href="mescollaborations.html">Mes Collaborations</a></li>
+                        <li><a href="marecommendation.html">Ma Recommandation</a></li>
+                    </ul>
+                </div>
+                <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+                <script>$(`li a[href*="${window.location.pathname.split("/").pop()}"]`).addClass("selected")</script>
+            </nav>
+    </header>
+    <main>
+        <section>
+            <header>
+                <p>Expo 1</p>
+            </header>
+            <article>
+                <video src="./media/expo1.mp4" controls preload="auto"></video>
+            <p>Enim amet ad officia minim. Irure ut nostrud excepteur enim pariatur consectetur incididunt elit enim. Dolor dolor ullamco minim fugiat deserunt. Culpa dolor in voluptate commodo ut aute. Anim in deserunt ullamco dolore eiusmod in do. Ullamco qui cupidatat magna ex. Reprehenderit tempor do cupidatat et adipisicing tempor aliquip nisi pariatur proident tempor sint sint enim.
+            </p>
+            </article>
+        </section>
+        <section class="separate">
+            <header>
+                <p>Expo 2</p>
+            </header>
+            <article>
+                <p>Laborum cillum eiusmod voluptate consectetur. Anim cupidatat eiusmod ex id cillum eiusmod incididunt aute. Anim reprehenderit esse est anim sint tempor est non aliquip duis. Ut adipisicing minim irure irure veniam magna commodo nostrud mollit. Anim aliquip aliquip excepteur adipisicing do adipisicing id sit.
+                    
+                </p>
+                <video src="./media/expo2.mp4" controls preload="auto" class="vid"></video>
+            </article>
+        </section>
+        <section class="separate">
+            <header>
+                <p>Expo 3</p>
+            </header>
+            <article>
+                <video src="./media/expo3.mp4" controls preload="auto" class="vid"></video>
+                <p>Cillum eu laboris minim dolor commodo deserunt commodo id ad duis fugiat veniam. Officia tempor est magna ipsum cillum consequat elit voluptate do. Consequat anim aute quis minim fugiat quis velit qui tempor sint. Enim occaecat commodo non nisi deserunt sint dolor est nisi occaecat reprehenderit cupidatat aliqua sint. Commodo ad laborum excepteur quis aute irure nulla amet consectetur non. Do dolore tempor non Lorem tempor mollit in.
+                </p>
+            </article>
+        </section>
+        <section class="separate">
+            <header id="taudio">
+                <p>Quelque son</p>
+            </header>
+            <article id="audio">
+                <audio src="./media/prod1.mp3" controls></audio>
+                <audio src="./media/prod2.mp3" controls></audio>
+                <audio src="./media/son1.wav" controls></audio>
+                <audio src="./media/son2.wav" controls></audio>
+                <audio src="./media/teaser1.mp3" controls></audio>
+                <audio src="./media/teaser2.mp3" controls></audio>
+            </article>
+    </main>
+</body>

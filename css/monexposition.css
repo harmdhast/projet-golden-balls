@@ -1,0 +1,86 @@
+@import url("accueil.css");
+
+.separate
+{
+    border-top: solid black 2px;
+}
+
+section>article
+{
+    display: flex;
+}
+
+section>article>video
+{
+    width: 30%;
+    margin: 70px;
+}
+
+section>article>p
+{
+    padding-top: 150px;
+    font-size: 20px;
+}
+
+main>section>header
+{
+    margin: 20px;
+    padding: 10px;
+}
+
+main>section>header>p
+{
+    text-align: center;
+    font-size: 3em;
+    
+}
+
+section>article>video:hover
+{
+    width: 100%;
+    transition: ease 2s;
+}
+
+.vid
+{
+    width: 20%;
+}
+
+.vid:hover
+{
+    width: 30%;
+}
+
+#audio
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: black;
+    margin-left: 45px;
+}
+
+section>article>audio
+{
+    padding: 20px;
+}
+
+#taudio:hover
+{
+    animation:anim1 5s infinite alternate;
+}
+
+@keyframes anim1
+{
+    0%{border: solid purple 2px;}
+    50%{margin-bottom: 100px; border: solid purple 5px;}
+    100%{border:solid purple 10px;}
+}
+
+section>article>audio:hover
+{
+    width: 100%;
+    background: gray;
+    transition: ease 1s;
+    margin-left: 15px;
+}
