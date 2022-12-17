@@ -1,1 +1,40 @@
 @import url("accueil.css");
+
+body{
+    background-color: #2d1546;
+    color: white;background-image:url("../images/gif5.gif"); background-size:100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height:100%;
+    width:100%;
+}
+
+
+.claire{
+    background-color: #D9D8D8;
+
+    vertical-align: bottom;
+    position: relative;
+}
+
+.case{
+    display: inline-block;
+    width: 33%;
+    height: 300px;
+    margin: 1%;
+}
+
+
+.gauche{
+    margin-left: 16%;
+}
+
+.premiere{
+    margin-top: 10%;
+}
+
+hr{
+    border: 3px solid black;
+    margin: auto 15%;
+}
+audio{padding: auto;;}
