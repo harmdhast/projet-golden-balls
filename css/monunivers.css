@@ -89,10 +89,6 @@ h2{
     height: calc(120px + 2rem);
 }
 
-.ui>img {
-    filter:invert(100%)
-}
-
 .uii{
     font-size: 20px;
     color: yellow;
