@@ -17,7 +17,7 @@ main {
 }
 
 .bg-gif {
-    background-image: url('../images/giphy.gif');
+    background-image: url('../univers/bg.webp');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -29,7 +29,7 @@ main {
 }
 
 .bg-img {
-    background-image: url('../images/messier.jpg');
+    background-image: url('../univers/messier.webp');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -75,7 +75,7 @@ h2{
  
 .ui{
 
-    background-image: url('../images/giphy.gif');
+    background-image: url('../univers/bg.webp');
     background-size: cover;
     background-repeat: no-repeat;
     height: 16vh;
@@ -87,7 +87,11 @@ h2{
     border: solid 4px rgb(9, 1, 20);
     border-radius: 1rem 1rem 0 0;
     height: calc(120px + 2rem);
-}    
+}
+
+.ui>img {
+    filter:invert(100%)
+}
 
 .uii{
     font-size: 20px;
