@@ -13,14 +13,12 @@
     </a>
     <script>$(`a[href*="${window.location.pathname.split("/").pop()}"]`).addClass("selected")</script>
     <script>
-        function showMenu(e) {
-            $("#navLinks").animate({"right": "0"})
-            console.log(e)
+        function showMenu() {
+            $("#navLinks").addClass("shown")
         }
 
-        function hideMenu(e) {
-            $("#navLinks").animate({"right": "-100vw"})
-            console.log(e)
+        function hideMenu() {
+            $("#navLinks").removeClass("shown")
         }
     </script>
 </nav>

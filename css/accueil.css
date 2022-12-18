@@ -1,19 +1,4 @@
-@import url("header.css");
-
-*{
-    margin: 0;
-    padding: 0;
-    
-}
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: 'Kanit', sans-serif;
-    background-color: rgb(18, 2, 40);
-    overflow-x: hidden;
-}
+@import url("default.css");
 
 main {
     width: 100%;

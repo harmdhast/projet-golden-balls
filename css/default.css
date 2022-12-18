@@ -1,0 +1,21 @@
+@import url("header.css");
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;400;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous:wght@400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+html {
+    overflow-x:hidden 
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Kanit', sans-serif;
+    background-color: rgb(18, 2, 40);
+    /* overflow-x: hidden; */
+}
