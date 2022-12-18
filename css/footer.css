@@ -31,3 +31,9 @@ footer{
 .logo>a>img{
     width: 100%;
 }
+
+@media(max-width: 700px){
+    .footer {
+        width: 90%;
+    }
+}

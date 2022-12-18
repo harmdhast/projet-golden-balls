@@ -1,8 +1,8 @@
 #Requires -Version 7.0
 
-$ToConvert = Get-ChildItem .\recommendation\*.jpg -Recurse
+$ToConvert = Get-ChildItem .\recommandation\*.jpg -Recurse
 
-#Select-String -Path .\*.html, .\recommendation\*.html -Pattern "\.jpg", "\.png"
+#Select-String -Path .\*.html, .\recommandation\*.html -Pattern "\.jpg", "\.png"
 
 #$audioFiles = Get-ChildItem * -Recurse -Include *.mp3,*.wav,*.ogg -Exclude "*_0gb*"
 

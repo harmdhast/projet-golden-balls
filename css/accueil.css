@@ -200,26 +200,26 @@ main {
     margin: auto;
 }
 
-/*--- recommendation ---*/
-.recommendation{
+/*--- recommandation ---*/
+.recommandation{
     width: 100%;
     margin-top: 20vh;
     color: white;
     margin-bottom: 40px;
 }
-.recommendation h1{
+.recommandation h1{
     font-size: 36px;
 }
-.recommendation>p{
+.recommandation>p{
     margin: 10px 0 40px;
     font-size: 14px;
     color: lightgrey;
     text-align: center;
 }
-.recommendation a{
+.recommandation a{
     text-align: center;
 }
-.recommendation>.content{
+.recommandation>.content{
     display: flex;
     flex-direction: column;
     justify-content: center;
