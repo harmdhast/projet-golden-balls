@@ -43,7 +43,7 @@ aside>.entry p {
     padding: 0;
     font-family: Righteous;
     line-height: 1.5rem;
-    height: 1.5rem;
+    /* height: 1.5rem; */
     overflow: hidden;
     pointer-events: none;
     user-select: none;
@@ -211,6 +211,10 @@ main {
     margin-bottom: 1rem;
 }
 
+@media (pointer:coarse) {
+    
+}
+
 @media(max-width: 1000px) and (min-width: 700px){
     aside>.entry {
         width: 10vw;
@@ -222,13 +226,16 @@ main {
     aside>.entry>p {
         height: 100%;
         margin: 0 !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     aside {
-        position: sticky;
+        /* position: sticky; */
         border-radius: 0;
         padding: 0;
         border: none;
-        top:4rem;
+        /* top:4rem; */
         z-index: 10;
     }
     main, aside {
@@ -269,6 +276,10 @@ main {
         top: 0;
         z-index: 9999999;
         width: auto;
+    }
+
+    aside>.entry:hover>p {
+        opacity: 0;
     }
 
     main h1 {
